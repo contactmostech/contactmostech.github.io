@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Mostech Solutions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #FFA500;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004080;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 2px solid #004080;
+    }
+    .note {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mostech Solutions</h1>
+    <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <h2>Our Portfolio</h2>
+    <p>Here are some highlights of our completed projects and installations.</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1">
+      <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2">
+      <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3">
+      <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4">
+    </div>
+    <p class="note">*You can replace these images with your actual project photos by updating the links in GitHub.*</p>
+  </div>
+</body>
+</html>
