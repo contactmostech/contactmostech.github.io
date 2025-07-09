@@ -1,13 +1,20 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-  <title>Mostech Solutions</title>
   <meta charset="utf-8" />
+  <title>Mostech Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Motion background container */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    /* Background Animation */
     #particles-js {
       position: fixed;
       top: 0;
@@ -15,28 +22,23 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(to right, #141e30, #243b55);
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
       z-index: -1;
     }
 
-    /* Content sits above motion background */
     .content-wrapper {
       position: relative;
       z-index: 1;
       padding: 20px;
-      color: white;
-    }
-
-    h1, h2, h3, p {
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .button.primary {
-      background-color: #FFA500;
-      border: none;
-    }
-
-    .button.primary:hover {
-      background-color: #e69500;
     }
 
     nav {
@@ -45,6 +47,7 @@
       position: sticky;
       top: 0;
       z-index: 2;
+      text-align: center;
     }
 
     nav a {
@@ -58,9 +61,17 @@
       text-decoration: underline;
     }
 
-    header, nav, .container, footer {
+    header, .container, footer {
       text-align: center;
       margin-bottom: 20px;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .cta {
@@ -79,7 +90,7 @@
 
     form {
       max-width: 500px;
-      margin: 0 auto;
+      margin: 30px auto;
       text-align: left;
     }
 
@@ -101,24 +112,31 @@
       background-color: #e69500;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    .icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: none;
+    .icons a {
+      color: white;
+      font-size: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
     }
   </style>
 </head>
-<body class="is-preload">
+<body>
 
-  <!-- Motion Background -->
+  <!-- Particle Background -->
   <div id="particles-js"></div>
+  <div class="overlay"></div>
 
-  <!-- All content inside this wrapper -->
+  <!-- Content Wrapper -->
   <div class="content-wrapper">
 
     <!-- Header -->
@@ -137,23 +155,24 @@
       <a href="form.html">Form</a>
     </nav>
 
-    <!-- Main Container -->
-    <div class="container fade-in">
+    <!-- Main Section -->
+    <div class="container">
       <h2>Welcome to Mostech Solutions</h2>
-      <p>We provide expert technology installation and services for homes and businesses...</p>
+      <p>
+        We provide expert technology installation and services for homes and businesses.
+        From network cabling to security systems and energy solutions, we make technology work for you.
+      </p>
+
       <a class="cta" href="contact.html">Get in Touch</a>
 
-      <section class="main" style="margin-top: 40px;">
-        <div class="inner">
-          <h3>Share This Site:</h3>
-          <ul class="actions stacked">
-            <li><a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="button icon brands fa-whatsapp"> Share on WhatsApp</a></li>
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="button icon brands fa-facebook"> Share on Facebook</a></li>
-          </ul>
-        </div>
+      <!-- Social Share -->
+      <section style="margin-top: 40px;">
+        <h3>Share This Site:</h3>
+        <a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="button icon brands fa-whatsapp"> WhatsApp</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="button icon brands fa-facebook"> Facebook</a>
       </section>
 
-      <!-- Contact Form (Zoho Ready) -->
+      <!-- Contact Form -->
       <section style="margin-top: 40px;">
         <h3>Contact Us</h3>
         <form action="mailto:support@mostechsolutions.name.ng" method="post" enctype="text/plain">
@@ -166,16 +185,14 @@
     </div>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer>
       <ul class="icons">
-        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="mailto:support@mostechsolutions.name.ng" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        <li><a href="#" class="icon brands fa-twitter" title="Twitter"></a></li>
+        <li><a href="#" class="icon brands fa-instagram" title="Instagram"></a></li>
+        <li><a href="#" class="icon brands fa-github" title="GitHub"></a></li>
+        <li><a href="mailto:support@mostechsolutions.name.ng" class="icon fa-envelope" title="Email"></a></li>
       </ul>
-      <ul class="copyright">
-        <li>&copy; Mostech Solutions</li><li>Design by <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
+      <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
     </footer>
   </div>
 
@@ -198,19 +215,6 @@
           onhover: { enable: true, mode: "repulse" }
         }
       }
-    });
-
-    // Scroll animation
-    document.addEventListener('DOMContentLoaded', () => {
-      const elements = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      });
-      elements.forEach(el => observer.observe(el));
     });
   </script>
 </body>
