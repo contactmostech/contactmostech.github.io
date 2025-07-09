@@ -1,19 +1,62 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services - Mostech Solutions</title>
+  <title>About Us - Mostech Solutions</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      color: #fff;
+      position: relative;
     }
+    .slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      overflow: hidden;
+    }
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 30s infinite;
+    }
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 10s; }
+    .slideshow img:nth-child(3) { animation-delay: 20s; }
+
+    @keyframes fade {
+      0%   { opacity: 0; }
+      10%  { opacity: 1; }
+      30%  { opacity: 1; }
+      40%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+      z-index: -1;
+    }
+
     header {
-      background-color: #004080;
+      background-color: rgba(0, 64, 128, 0.85);
       color: #fff;
       padding: 20px;
       text-align: center;
@@ -22,12 +65,13 @@
       background-color: #FFA500;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       padding: 10px;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 5px 10px;
       font-weight: bold;
     }
     nav a:hover {
@@ -37,19 +81,41 @@
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      color: #333;
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: #004080;
     }
     ul {
-      list-style-type: square;
-      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+      h1, h2, h3 {
+        font-size: 1.3em;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="slideshow">
+    <img src="assets/images/tech-tools.jpg" alt="Tech Tools">
+    <img src="assets/images/solar-panels.jpg" alt="Solar Panels">
+    <img src="assets/images/cctv-camera.jpg" alt="CCTV Camera">
+  </div>
+  <div class="overlay"></div>
+
   <header>
     <h1>Mostech Solutions</h1>
     <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
@@ -62,20 +128,41 @@
     <a href="contact.html">Contact</a>
   </nav>
   <div class="container">
-    <h2>Our Services</h2>
-    <p>At Mostech Solutions, we offer a wide range of expert installation and technology services to meet your needs:</p>
+    <h2>About Mostech Solutions</h2>
+    <p>
+      Mostech Solutions is a trusted tech service provider specializing in installations and smart solutions for modern living.
+      Founded on the belief that technology should make life easier and safer, our team combines technical expertise with
+      practical experience to deliver secure, efficient, and high-quality systems.
+    </p>
+    <p>
+      We have successfully executed multiple projects, from small residential installations to large commercial setups,
+      always ensuring attention to detail, safety standards, and customer satisfaction.
+    </p>
+    <p>
+      Our approach is client-focused—we take time to understand your needs, offer professional advice, and execute with
+      precision and care. Whether you’re setting up a new office, upgrading your security systems, or investing in sustainable
+      energy, we’ll guide you every step of the way.
+    </p>
+    <p>
+      We serve clients across Lagos, Ogun, Osun, Oyo, and are expanding into Ondo State. We’re proud to be known for our
+      integrity, quality service, and dedication to building long-term relationships with our customers.
+    </p>
+    <h3>Our Mission</h3>
+    <p>
+      To provide reliable, affordable, and top-quality technology installations that improve lives and businesses.
+    </p>
+    <h3>Our Vision</h3>
+    <p>
+      To be the go-to choice for tech solutions in Nigeria and beyond.
+    </p>
+    <h3>Our Core Values</h3>
     <ul>
-      <li>Wi-Fi setup and troubleshooting (homes and small offices)</li>
-      <li>Network installation and restructuring</li>
-      <li>CCTV installation and configuration</li>
-      <li>Access door systems installation</li>
-      <li>Fire alarm system installation</li>
-      <li>Thunder arrestor installation</li>
-      <li>Inverter and solar panel installation</li>
-      <li>LAN port and access point setup</li>
-      <li>General tech consultancy</li>
+      <li>Professionalism</li>
+      <li>Integrity</li>
+      <li>Customer satisfaction</li>
+      <li>Innovation</li>
+      <li>Quality workmanship</li>
     </ul>
-    <p>Not sure what you need? <a href="contact.html">Contact us</a> for a free consultation today!</p>
   </div>
 </body>
 </html>
