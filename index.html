@@ -1,68 +1,127 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Mostech Solutions</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-      /* Custom overrides */
-      h1, h2, h3, p {
-        font-family: 'Segoe UI', sans-serif;
-      }
-      .button.primary {
-        background-color: #FFA500;
-        border: none;
-      }
-      .button.primary:hover {
-        background-color: #e69500;
-      }
-    </style>
-  </head>
-  <body class="is-preload">
+<head>
+  <title>Mostech Solutions</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Motion background container */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #141e30, #243b55);
+      z-index: -1;
+    }
+
+    /* Content sits above motion background */
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      color: white;
+    }
+
+    h1, h2, h3, p {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .button.primary {
+      background-color: #FFA500;
+      border: none;
+    }
+
+    .button.primary:hover {
+      background-color: #e69500;
+    }
+
+    nav a {
+      margin-right: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header, nav, .container, footer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 10px 20px;
+      background: orange;
+      color: white;
+      text-decoration: none;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .cta:hover {
+      background: #e69500;
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Motion Background -->
+  <div id="particles-js"></div>
+
+  <!-- All content inside this wrapper -->
+  <div class="content-wrapper">
 
     <!-- Header -->
     <header>
-    <h1>Mostech Solutions</h1>
-    <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-    <a href="form.html">Form</a>
-  </nav>
-  <div class="container">
+      <h1>Mostech Solutions</h1>
+      <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
+    </header>
 
-    <!-- Intro Section -->
-    <h2>Welcome to Mostech Solutions</h2>
-    <p>
-      At Mostech Solutions, we provide expert technology installation and services for homes and businesses.
-      From network cabling to security systems and energy solutions, we make technology work for you.
-    </p>
-    <p>
-      Our team is passionate about helping you stay connected, secure, and powered up. Whether you’re upgrading
-      your office network, installing CCTV cameras, or ensuring uninterrupted power with inverters and solar panels,
-      we bring years of experience and dedication to every project.
-    </p>
-    <p>
-      We focus on neat, reliable, and affordable installations that deliver real value. Partner with us today and discover
-      the difference of working with true professionals.
-    </p>
-    <a class="cta" href="contact.html">Get in Touch</a>
-<div style="margin-top: 20px;">
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="form.html">Form</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h2>Welcome to Mostech Solutions</h2>
+      <p>
+        At Mostech Solutions, we provide expert technology installation and services for homes and businesses.
+        From network cabling to security systems and energy solutions, we make technology work for you.
+      </p>
+      <p>
+        Our team is passionate about helping you stay connected, secure, and powered up. Whether you’re upgrading
+        your office network, installing CCTV cameras, or ensuring uninterrupted power with inverters and solar panels,
+        we bring years of experience and dedication to every project.
+      </p>
+      <p>
+        We focus on neat, reliable, and affordable installations that deliver real value. Partner with us today and discover
+        the difference of working with true professionals.
+      </p>
+
+      <a class="cta" href="contact.html">Get in Touch</a>
+
       <!-- Social Sharing -->
-    <section class="main">
-      <div class="inner">
-        <h3>Share This Site:</h3>
-        <ul class="actions stacked">
-          <li><a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="button icon brands fa-whatsapp">Share on WhatsApp</a></li>
-          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="button icon brands fa-facebook">Share on Facebook</a></li>
-        </ul>
-      </div>
-    </section>
+      <section class="main" style="margin-top: 40px;">
+        <div class="inner">
+          <h3>Share This Site:</h3>
+          <ul class="actions stacked">
+            <li><a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="button icon brands fa-whatsapp">Share on WhatsApp</a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="button icon brands fa-facebook">Share on Facebook</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
 
     <!-- Footer -->
     <footer id="footer">
@@ -77,8 +136,28 @@
       </ul>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
+  </div> <!-- end .content-wrapper -->
 
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
