@@ -1,55 +1,180 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Mostech Solutions</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      position: relative;
+    }
+    .slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      overflow: hidden;
+    }
+    .slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 30s infinite;
+    }
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 10s; }
+    .slideshow img:nth-child(3) { animation-delay: 20s; }
+
+    @keyframes fade {
+      0%   { opacity: 0; }
+      10%  { opacity: 1; }
+      30%  { opacity: 1; }
+      40%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(0, 64, 128, 0.85);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #FFA500;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 5px 10px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      color: #333;
+    }
+    h2, h3 {
+      color: #004080;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px;
+      background-color: #FFA500;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e69500;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      height: 1100px;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="slideshow">
+    <img src="assets/images/tech-tools.jpg" alt="Tech Tools">
+    <img src="assets/images/solar-panels.jpg" alt="Solar Panels">
+    <img src="assets/images/cctv-camera.jpg" alt="CCTV Camera">
+  </div>
+  <div class="overlay"></div>
+
   <header>
     <h1>Mostech Solutions</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
   </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">We’d love to hear from you! Fill the form below or use our contact details.</p>
 
-  <main>
-    <section>
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you! Fill the form below or use our contact details.</p>
+    <h3>Our Details</h3>
+    <ul>
+      <li>📞 Phone / WhatsApp: 081 6017 9776</li>
+      <li>🌐 Website: <a href="https://www.mostechsolutions.name.ng" target="_blank">www.mostechsolutions.name.ng</a></li>
+      <li>
+        📧 Email: 
+        <a href="mailto:support@mostechsolutions.name.ng" style="color: #0066cc;">support@mostechsolutions.name.ng</a>
+      </li>
+      <li>🏢 Office: No 35, Okunola Bus Stop, Egbeda, Lagos State</li>
+    </ul>
 
-      <h3>Our Details</h3>
-      <ul>
-        <li>📞 Phone / WhatsApp: 081 6017 9776</li>
-              <li>🌐 Website: <a href="https://www.mostechsolutions.name.ng">www.mostechsolutions.name.ng</a></li>
-   
-        
-          <p style="font-size: 16px; font-family: Arial, sans-serif;">
-  <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" width="20" style="vertical-align: middle; margin-right: 8px;">
-  <a href="contactmostech@gmail.com" style="text-decoration: none; color: #0066cc;" onmouseover="this.style.color='#004488'" onmouseout="this.style.color='#0066cc'">
-  
-    
-        <p style="font-size: 16px; font-family: Arial, sans-serif;">
-  <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" width="20" style="vertical-align: middle; margin-right: 8px;">
-  <a href="mailto:support@mostechsolutions.name.ng" style="text-decoration: none; color: #0066cc;" onmouseover="this.style.color='#004488'" onmouseout="this.style.color='#0066cc'">
-  support@mostechsolutions.name.ng
-</a>
-</p>
-        <li>🏢 Office: No 35, Okunola Bus Stop, Egbeda, Lagos State</li>
-      </ul>
-
-      <h3>Online Contact Form</h3>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_5dL92KsUcPkwOMzmyFgL0ovVTVff1P1zLJuLhJenWZfzGA/viewform?embedded=true" width="640" height="1101" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Mostech Solutions. All rights reserved.</p>
-  </footer>
+    <h3>Online Contact Form</h3>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_5dL92KsUcPkwOMzmyFgL0ovVTVff1P1zLJuLhJenWZfzGA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
 </body>
 </html>
