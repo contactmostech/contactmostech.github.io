@@ -12,25 +12,23 @@
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
       color: white;
-      height: 100%;
+      background: #0f0f0f;
     }
 
-    #vanta-bg {
+    #tech-bg {
       position: fixed;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       z-index: -2;
-      top: 0;
-      left: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     }
 
     .overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
       z-index: -1;
     }
 
@@ -66,7 +64,7 @@
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.4);
       padding: 30px;
       border-radius: 10px;
       max-width: 900px;
@@ -101,13 +99,13 @@
       border: none;
     }
 
-    input[type="submit"] {
+    input[type="submit"], button {
       background-color: orange;
       color: white;
       cursor: pointer;
     }
 
-    input[type="submit"]:hover {
+    input[type="submit"]:hover, button:hover {
       background-color: #e69500;
     }
 
@@ -131,17 +129,22 @@
 </head>
 <body>
 
-  <!-- Vanta Motion Background -->
-  <div id="vanta-bg"></div>
+  <!-- Tech Background -->
+  <div id="tech-bg">
+    <canvas id="backgroundCanvas"></canvas>
+  </div>
   <div class="overlay"></div>
 
-  <!-- Content -->
+  <!-- Content Wrapper -->
   <div class="content-wrapper">
+
+    <!-- Header -->
     <header>
       <h1>Mostech Solutions</h1>
       <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
     </header>
 
+    <!-- Navigation -->
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -151,6 +154,7 @@
       <a href="form.html">Form</a>
     </nav>
 
+    <!-- Main Section -->
     <div class="container">
       <h2>Welcome to Mostech Solutions</h2>
       <p>
@@ -160,7 +164,7 @@
 
       <a class="cta" href="contact.html">Get in Touch</a>
 
-      <!-- Share Section -->
+      <!-- Social Share -->
       <section style="margin-top: 40px;">
         <h3>Share This Site:</h3>
         <a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="button icon brands fa-whatsapp"> WhatsApp</a>
@@ -179,6 +183,7 @@
       </section>
     </div>
 
+    <!-- Footer -->
     <footer>
       <ul class="icons">
         <li><a href="#" class="icon brands fa-twitter" title="Twitter"></a></li>
@@ -188,6 +193,27 @@
       </ul>
       <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
     </footer>
-  </div
+  </div>
 
-  
+  <!-- Particle Background Script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("tech-bg", {
+      particles: {
+        number: { value: 50 },
+        color: { value: "#00ccff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3 },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
