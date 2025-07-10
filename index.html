@@ -89,26 +89,26 @@
 
     .gallery {
       display: flex;
-      justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
       margin-top: 40px;
     }
 
     .gallery-item {
-      max-width: 280px;
-      text-align: center;
+      flex: 1 1 250px;
+      max-width: 300px;
     }
 
     .gallery-item img {
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
-    .gallery-item h4 {
+    .gallery-item p {
+      text-align: center;
       margin-top: 10px;
-      color: orange;
+      color: #fff;
     }
 
     form {
@@ -154,14 +154,21 @@
   </style>
 </head>
 <body>
+
+  <!-- Particle Background -->
   <div id="particles-js"></div>
   <div class="overlay"></div>
+
+  <!-- Content Wrapper -->
   <div class="content-wrapper">
+
+    <!-- Header -->
     <header>
       <h1>Mostech Solutions</h1>
       <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
     </header>
 
+    <!-- Navigation -->
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -171,6 +178,7 @@
       <a href="form.html">Form</a>
     </nav>
 
+    <!-- Main Section -->
     <div class="container">
       <h2>Welcome to Mostech Solutions</h2>
       <p>
@@ -180,19 +188,19 @@
 
       <a class="cta" href="contact.html">Get in Touch</a>
 
-      <!-- Image Showcase Section -->
+      <!-- Image Gallery -->
       <section class="gallery">
         <div class="gallery-item">
-          <img src="assets/images/tech-tools.jpg.jpg" alt="Tech Tools">
-          <h4>🛠️ Tech Tools</h4>
+          <img src="assets/images/tech-tools.jpg" alt="Tech Tools">
+          <p>🛠️ Tech Tools</p>
         </div>
         <div class="gallery-item">
-          <img src="assets/images/solar-panels.jpg.jpg" alt="Solar Panels">
-          <h4>☀️ Solar Panels</h4>
+          <img src="assets/images/solar-panels.jpg" alt="Solar Panels">
+          <p>☀️ Solar Panels</p>
         </div>
         <div class="gallery-item">
-          <img src="assets/images/cctv-camera.jpg.jpg" alt="CCTV Camera">
-          <h4>📹 CCTV Cameras</h4>
+          <img src="assets/images/cctv-camera.jpg" alt="CCTV Camera">
+          <p>📹 CCTV Camera</p>
         </div>
       </section>
 
@@ -215,6 +223,7 @@
       </section>
     </div>
 
+    <!-- Footer -->
     <footer>
       <ul class="icons">
         <li><a href="#" class="icon brands fa-twitter" title="Twitter"></a></li>
@@ -226,6 +235,7 @@
     </footer>
   </div>
 
+  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
