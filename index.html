@@ -4,69 +4,76 @@
   <meta charset="utf-8" />
   <title>Mostech Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --main-bg: linear-gradient(to right, #f4f7f8, #dde1e7);
-      --primary-color: #0073aa;
-      --cta-color: #ffa500;
-      --text-color: #333;
+      --primary: #0073aa;
+      --secondary: #f8f9fa;
+      --dark: #343a40;
+      --light: #ffffff;
+      --accent: #ffa500;
     }
 
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--main-bg);
-      color: var(--text-color);
+      background: var(--secondary);
+      color: var(--dark);
+    }
+
+    header {
+      background-color: var(--light);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      color: var(--primary);
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
     }
 
     nav {
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 10px 0;
+      background: var(--primary);
+      padding: 12px 0;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
 
     nav a {
+      color: white;
       margin: 0 15px;
-      color: var(--primary-color);
-      font-weight: bold;
       text-decoration: none;
+      font-weight: 600;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    header {
-      background: #ffffff;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    header h1 {
-      margin: 0;
-      color: var(--primary-color);
-    }
-
     .container {
-      background: #fff;
       max-width: 900px;
+      background: var(--light);
       margin: 40px auto;
       padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: var(--primary);
     }
 
     .cta {
       display: inline-block;
-      background: var(--cta-color);
+      background: var(--accent);
       color: white;
       padding: 10px 20px;
       text-decoration: none;
@@ -78,16 +85,7 @@
       background: #e69500;
     }
 
-    section {
-      margin-top: 40px;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-    }
-
-    input, textarea {
+    form input, form textarea {
       width: 100%;
       padding: 12px;
       margin-top: 10px;
@@ -98,21 +96,21 @@
     }
 
     input[type="submit"] {
-      background-color: var(--cta-color);
-      color: white;
+      background: var(--accent);
       border: none;
+      color: white;
       cursor: pointer;
     }
 
     input[type="submit"]:hover {
-      background-color: #e69500;
+      background: #e69500;
     }
 
     footer {
       text-align: center;
+      background: var(--dark);
+      color: white;
       padding: 30px 10px;
-      color: #666;
-      font-size: 14px;
     }
 
     .icons {
@@ -125,20 +123,18 @@
     }
 
     .icons a {
-      color: var(--primary-color);
+      color: white;
       font-size: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>Mostech Solutions</h1>
     <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -148,25 +144,19 @@
     <a href="form.html">Form</a>
   </nav>
 
-  <!-- Main Content -->
   <div class="container">
     <h2>Welcome to Mostech Solutions</h2>
-    <p>
-      We provide expert technology installation and services for homes and businesses.
-      From network cabling to security systems and energy solutions, we make technology work for you.
-    </p>
-
+    <p>We provide expert technology installation and services for homes and businesses.
+      From network cabling to security systems and energy solutions, we make technology work for you.</p>
     <a class="cta" href="contact.html">Get in Touch</a>
 
-    <!-- Social Share -->
-    <section>
+    <section style="margin-top: 40px;">
       <h3>Share This Site:</h3>
       <a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="cta" style="background: #25D366;">WhatsApp</a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="cta" style="background: #4267B2;">Facebook</a>
     </section>
 
-    <!-- Contact Form -->
-    <section>
+    <section style="margin-top: 40px;">
       <h3>Contact Us</h3>
       <form action="mailto:support@mostechsolutions.name.ng" method="post" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -177,7 +167,6 @@
     </section>
   </div>
 
-  <!-- Footer -->
   <footer>
     <ul class="icons">
       <li><a href="#" class="icon brands fa-twitter" title="Twitter"></a></li>
@@ -185,7 +174,7 @@
       <li><a href="#" class="icon brands fa-github" title="GitHub"></a></li>
       <li><a href="mailto:support@mostechsolutions.name.ng" class="icon fa-envelope" title="Email"></a></li>
     </ul>
-    <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
+    <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" style="color: #ccc;">HTML5 UP</a></p>
   </footer>
 
 </body>
