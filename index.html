@@ -7,106 +7,112 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --main-bg: linear-gradient(to right, #f4f7f8, #dde1e7);
+      --primary-color: #0073aa;
+      --cta-color: #ffa500;
+      --text-color: #333;
+    }
+
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: white;
-      background: #0f0f0f;
-    }
-
-    #tech-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -2;
-      overflow: hidden;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: -1;
-    }
-
-    .content-wrapper {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
+      background: var(--main-bg);
+      color: var(--text-color);
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 2;
-      text-align: center;
+      z-index: 10;
     }
 
     nav a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: none;
+      margin: 0 15px;
+      color: var(--primary-color);
       font-weight: bold;
+      text-decoration: none;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    header, .container, footer {
+    header {
+      background: #ffffff;
+      padding: 40px 20px;
       text-align: center;
-      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--primary-color);
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 10px;
+      background: #fff;
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
     .cta {
       display: inline-block;
-      padding: 10px 20px;
-      background: orange;
+      background: var(--cta-color);
       color: white;
+      padding: 10px 20px;
       text-decoration: none;
-      margin-top: 20px;
       border-radius: 5px;
+      margin-top: 20px;
     }
 
     .cta:hover {
       background: #e69500;
     }
 
+    section {
+      margin-top: 40px;
+    }
+
     form {
       max-width: 500px;
-      margin: 30px auto;
-      text-align: left;
+      margin: auto;
     }
 
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
       border-radius: 5px;
-      border: none;
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
 
-    input[type="submit"], button {
-      background-color: orange;
+    input[type="submit"] {
+      background-color: var(--cta-color);
       color: white;
+      border: none;
       cursor: pointer;
     }
 
-    input[type="submit"]:hover, button:hover {
+    input[type="submit"]:hover {
       background-color: #e69500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: #666;
+      font-size: 14px;
     }
 
     .icons {
@@ -115,105 +121,72 @@
       display: flex;
       justify-content: center;
       gap: 15px;
+      margin-bottom: 10px;
     }
 
     .icons a {
-      color: white;
+      color: var(--primary-color);
       font-size: 20px;
-    }
-
-    footer {
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Tech Background -->
-  <div id="tech-bg">
-    <canvas id="backgroundCanvas"></canvas>
-  </div>
-  <div class="overlay"></div>
+  <!-- Header -->
+  <header>
+    <h1>Mostech Solutions</h1>
+    <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
+  </header>
 
-  <!-- Content Wrapper -->
-  <div class="content-wrapper">
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <a href="form.html">Form</a>
+  </nav>
 
-    <!-- Header -->
-    <header>
-      <h1>Mostech Solutions</h1>
-      <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
-    </header>
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Welcome to Mostech Solutions</h2>
+    <p>
+      We provide expert technology installation and services for homes and businesses.
+      From network cabling to security systems and energy solutions, we make technology work for you.
+    </p>
 
-    <!-- Navigation -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="form.html">Form</a>
-    </nav>
+    <a class="cta" href="contact.html">Get in Touch</a>
 
-    <!-- Main Section -->
-    <div class="container">
-      <h2>Welcome to Mostech Solutions</h2>
-      <p>
-        We provide expert technology installation and services for homes and businesses.
-        From network cabling to security systems and energy solutions, we make technology work for you.
-      </p>
+    <!-- Social Share -->
+    <section>
+      <h3>Share This Site:</h3>
+      <a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="cta" style="background: #25D366;">WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="cta" style="background: #4267B2;">Facebook</a>
+    </section>
 
-      <a class="cta" href="contact.html">Get in Touch</a>
-
-      <!-- Social Share -->
-      <section style="margin-top: 40px;">
-        <h3>Share This Site:</h3>
-        <a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="button icon brands fa-whatsapp"> WhatsApp</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="button icon brands fa-facebook"> Facebook</a>
-      </section>
-
-      <!-- Contact Form -->
-      <section style="margin-top: 40px;">
-        <h3>Contact Us</h3>
-        <form action="mailto:support@mostechsolutions.name.ng" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <input type="submit" value="Send Message">
-        </form>
-      </section>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-      <ul class="icons">
-        <li><a href="#" class="icon brands fa-twitter" title="Twitter"></a></li>
-        <li><a href="#" class="icon brands fa-instagram" title="Instagram"></a></li>
-        <li><a href="#" class="icon brands fa-github" title="GitHub"></a></li>
-        <li><a href="mailto:support@mostechsolutions.name.ng" class="icon fa-envelope" title="Email"></a></li>
-      </ul>
-      <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
-    </footer>
+    <!-- Contact Form -->
+    <section>
+      <h3>Contact Us</h3>
+      <form action="mailto:support@mostechsolutions.name.ng" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
   </div>
 
-  <!-- Particle Background Script -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("tech-bg", {
-      particles: {
-        number: { value: 50 },
-        color: { value: "#00ccff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: 3 },
-        move: { enable: true, speed: 2 }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" }
-        }
-      }
-    });
-  </script>
+  <!-- Footer -->
+  <footer>
+    <ul class="icons">
+      <li><a href="#" class="icon brands fa-twitter" title="Twitter"></a></li>
+      <li><a href="#" class="icon brands fa-instagram" title="Instagram"></a></li>
+      <li><a href="#" class="icon brands fa-github" title="GitHub"></a></li>
+      <li><a href="mailto:support@mostechsolutions.name.ng" class="icon fa-envelope" title="Email"></a></li>
+    </ul>
+    <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
+  </footer>
+
 </body>
 </html>
