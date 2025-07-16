@@ -5,136 +5,120 @@
   <title>Mostech Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <style>
-    :root {
-      --primary: #0073aa;
-      --secondary: #f8f9fa;
-      --dark: #343a40;
-      --light: #ffffff;
-      --accent: #ffa500;
-    }
-
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--secondary);
-      color: var(--dark);
+      color: white;
+      background: #f8f9fa;
     }
 
-    header {
-      background-color: var(--light);
-      padding: 40px 20px;
+    header, nav, .container, footer {
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      color: var(--primary);
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #555;
+      margin-bottom: 20px;
     }
 
     nav {
-      background: var(--primary);
-      padding: 12px 0;
-      text-align: center;
+      background-color: #343a40;
+      padding: 10px;
     }
-
     nav a {
-      color: white;
       margin: 0 15px;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
 
     .container {
-      max-width: 900px;
-      background: var(--light);
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: auto;
       padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    h2 {
-      color: var(--primary);
+      background-color: #fff;
+      border-radius: 10px;
+      color: #333;
     }
 
     .cta {
       display: inline-block;
-      background: var(--accent);
-      color: white;
       padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-
-    .cta:hover {
-      background: #e69500;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
-    input[type="submit"] {
-      background: var(--accent);
-      border: none;
+      background: #007bff;
       color: white;
-      cursor: pointer;
+      text-decoration: none;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .cta:hover {
+      background: #0056b3;
     }
 
-    input[type="submit"]:hover {
-      background: #e69500;
+    /* Carousel */
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-top: 30px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Blog Section */
+    .blog-section {
+      margin-top: 40px;
+    }
+    .blog-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .blog-card {
+      background-color: #f1f1f1;
+      color: #000;
+      padding: 20px;
+      flex: 1 1 calc(33% - 20px);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .blog-card h4 {
+      margin-top: 0;
     }
 
     footer {
-      text-align: center;
-      background: var(--dark);
-      color: white;
-      padding: 30px 10px;
+      margin-top: 60px;
     }
-
     .icons {
       list-style: none;
       padding: 0;
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin-bottom: 10px;
     }
-
     .icons a {
-      color: white;
+      color: #343a40;
       font-size: 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Mostech Solutions</h1>
     <p>Your One-Stop Tech Partner for Reliable Installations and Smart Solutions</p>
   </header>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -147,24 +131,41 @@
   <div class="container">
     <h2>Welcome to Mostech Solutions</h2>
     <p>We provide expert technology installation and services for homes and businesses.
-      From network cabling to security systems and energy solutions, we make technology work for you.</p>
+    From network cabling to security systems and energy solutions, we make technology work for you.</p>
+
     <a class="cta" href="contact.html">Get in Touch</a>
 
-    <section style="margin-top: 40px;">
-      <h3>Share This Site:</h3>
-      <a href="https://wa.me/?text=Check%20out%20Mostech%20Solutions!%20https%3A%2F%2Fmosetechsolutions.name.ng" class="cta" style="background: #25D366;">WhatsApp</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://mosetechsolutions.name.ng" class="cta" style="background: #4267B2;">Facebook</a>
-    </section>
+    <!-- Carousel Section -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/slide1.jpg" alt="Slide 1"></div>
+        <div class="swiper-slide"><img src="assets/images/slide2.jpg" alt="Slide 2"></div>
+        <div class="swiper-slide"><img src="assets/images/slide3.jpg" alt="Slide 3"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
 
-    <section style="margin-top: 40px;">
-      <h3>Contact Us</h3>
-      <form action="mailto:support@mostechsolutions.name.ng" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message">
-      </form>
-    </section>
+    <!-- Blog Section -->
+    <div class="blog-section">
+      <h3>Latest Blog Posts</h3>
+      <div class="blog-cards">
+        <div class="blog-card">
+          <img src="assets/images/blog1.jpg" alt="Blog 1">
+          <h4>5 Ways to Secure Your Home</h4>
+          <p>Learn how to protect your home with modern security systems. Tips for smart cameras, alarms, and more.</p>
+        </div>
+        <div class="blog-card">
+          <img src="assets/images/blog2.jpg" alt="Blog 2">
+          <h4>Benefits of Solar Energy</h4>
+          <p>Why solar power is a great solution for homes and businesses in Nigeria. Cost-saving and eco-friendly tips.</p>
+        </div>
+        <div class="blog-card">
+          <img src="assets/images/blog3.jpg" alt="Blog 3">
+          <h4>Top Networking Tools in 2025</h4>
+          <p>Upgrade your office network with these reliable and affordable tools trending this year.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -174,8 +175,20 @@
       <li><a href="#" class="icon brands fa-github" title="GitHub"></a></li>
       <li><a href="mailto:support@mostechsolutions.name.ng" class="icon fa-envelope" title="Email"></a></li>
     </ul>
-    <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" style="color: #ccc;">HTML5 UP</a></p>
+    <p>&copy; 2025 Mostech Solutions. Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a></p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  </script>
 </body>
 </html>
